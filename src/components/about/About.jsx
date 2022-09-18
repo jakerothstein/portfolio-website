@@ -1,11 +1,60 @@
 import React from 'react';
 import "./about.css"
+import Image from "../../assets/Jake.png"
+import AboutBox from "./AboutBox";
 
 const About = () => {
     return (
-        <div>
+        <section className="about container section" id='about'>
+            <h2 className="section__title">About Me</h2>
+            <div className="about__container grid">
+                <img src={Image} alt="" className='about__img'/>
+                <div className="about__data grid">
+                    <div className="about info">
+                        <p className="about__description">
+                            I am Jake Rothstein, a high-school programer from the bay area.
+                        </p>
+                        <a href="https://stackoverflow.com/questions/63239809/webstorm-functional-snippet-react" className="btn">Download Resume</a>
+                    </div>
 
-        </div>
+                    <div className="about__skills grid">
+                        <div className="skills_data">
+                            <div className="skills__titles">
+                                <h3 className="skills__name">Python</h3>
+                                <span className="skills__number">80%</span>
+                            </div>
+
+                            <div className="skills__bar">
+                                <span className="skills__percentage python"></span>
+                            </div>
+                        </div>
+
+                        <div className="skills_data">
+                            <div className="skills__titles">
+                                <h3 className="skills__name">Go</h3>
+                                <span className="skills__number">70%</span>
+                            </div>
+
+                            <div className="skills__bar">
+                                <span className="skills__percentage go"></span>
+                            </div>
+                        </div>
+
+                        <div className="skills_data">
+                            <div className="skills__titles">
+                                <h3 className="skills__name">HTML/CSS</h3>
+                                <span className="skills__number">50%</span>
+                            </div>
+
+                            <div className="skills__bar">
+                                <span className="skills__percentage html-css"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <AboutBox />
+        </section>
     );
 };
 
