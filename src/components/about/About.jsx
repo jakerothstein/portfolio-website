@@ -14,7 +14,7 @@ const About = () => {
                         <p className="about__description">
                             I am Jake Rothstein, a high-school programer from the bay area.
                         </p>
-                        <a href="https://stackoverflow.com/questions/63239809/webstorm-functional-snippet-react" className="btn">Download Resume</a>
+                        <a href={require("../../assets/Jake-Rothstein-Resume.pdf")}  className="btn" download="Jake Rothstein Resume - 2022">Download Resume</a>
                     </div>
 
                     <div className="about__skills grid">
