@@ -33,9 +33,11 @@ const Contact = () => {
         )
             .then((response) => {
                 console.log('Message sent successfully', response.status, response.text)
+                window.location.reload();
             })
             .catch((err) => {
                 console.log('Failed', err)
+                alert('Message failed to send');
             })
     }
     return (
@@ -47,10 +49,10 @@ const Contact = () => {
                         <br/>
                         <p className="contact__details">Don't like forms? Send me an email. 👋</p>
                         <br/>
-                        <a href="mailto: jake.b.rothstein@gmail.com" className='btn' >Send Email</a>
+                        <a href="mailto: jake.b.rothstein@gmail.com" className='btn'>Send Email</a>
                     </div>
 
-                <form onSubmit={sendMail} className="contact__form">
+                <form onSubmit={sendMail} id='form' className="contact__form" >
                     <div className="contact__form-group">
                         <div className="contact__form-div">
                             <input type="text" className="contact__form-input" placeholder='Insert your name' value={sender_name} onChange={handleName} required/>
