@@ -18,9 +18,14 @@
 }
 
 .home__name {
-    font: var(--h1-font-size);
+    font: var(--h2-font-size);
+    font-size: 1.5rem;
     font-weight: var(--font-bold);
     margin-bottom: .5rem;
+}
+
+.home__education {
+    color: var(--text-color);
 }
 
 .home__socials {
@@ -48,6 +53,8 @@
 
 .home__scroll-name {
     font-size: var(--small-font-size);
+    color: var(--title-color);
+
 }
 
 .mouse {

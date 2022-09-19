@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
 :root {
-    --first-color: hsl(353, 100%, 65%);
-    --title-color: hsl(244, 24%, 26%);
-    --text-color: hsl(244, 16%, 43%);
-    --body-color: hsl(258, 60%, 98%);
+    --first-color: #a68f33;
+    --title-color: #4e6c8d;
+    --text-color: #597c96;
+    --body-color: #31414D;
     --hover-color: hsl(43, 100%, 68%);
-    --container-color: #fff;
+    --container-color: #b8cee3;
 
     --body-font: 'Rubik', sans-serif;
     --h1-font-size: 2.25rem;

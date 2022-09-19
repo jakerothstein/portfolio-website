@@ -13,7 +13,7 @@ const Resume = () => {
                     {Data.map((val, id) => {
                         if (val.category === "education") {
                             return (
-                                <Card key={id} icon={val.icon} title={val.title} year={val.year} desc={val.desc}/>
+                                <Card key={id} icon={val.icon} title={val.title} year={val.year} desc={val.desc} gpa={val.gpa}/>
                             )
                         }
                     })}
