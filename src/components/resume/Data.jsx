@@ -14,7 +14,7 @@ const Data = [
         icon: "icon-graduation",
         year: "2020 - 2024",
         title: "College of San Mateo",
-        desc: "Supplemental dual enrollment for CS classes during high school",
+        desc: "Supplemental dual enrollment for CS classes during high school (SQL, C++ and Java)",
         gpa: "GPA: 4.0"
     },
 

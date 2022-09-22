@@ -12,7 +12,7 @@ const About = () => {
                 <div className="about__data grid">
                     <div className="about info">
                         <p className="about__description">
-                            I am Jake Rothstein, a high-school programer from the bay area.
+                            Hi, I'm Jake Rothstein, a high-school programmer from the bay area. In my free time I enjoy running, hiking and photography in nature.
                         </p>
                         <a href={require("../../assets/Jake-Rothstein-Resume.pdf")}  className="btn" download="Jake Rothstein Resume - 2022">Download Resume</a>
                     </div>
