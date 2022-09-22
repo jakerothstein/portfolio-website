@@ -1,12 +1,20 @@
 import React, {useState} from 'react';
 import "./contact.css";
-import { send } from 'emailjs-com';
+import ReCAPTCHA from "react-google-recaptcha";
+import {send} from 'emailjs-com';
 
 const Contact = () => {
     const [sender_name, set_sender_name] = useState('')
     const [sender_email, set_sender_email] = useState('')
     const [subject, set_subject] = useState('')
     const [message, set_message] = useState('')
+    let Sucess = false
+
+
+    function onChange(value) {
+        Sucess = true
+    }
+
     const handleName = (e) => {
         set_sender_name(e.target.value)
     }
@@ -25,20 +33,24 @@ const Contact = () => {
 
     const sendMail = (e) => {
         e.preventDefault();
-        send(
-            'service_kgm3h3h',
-            'template_5ogqb9t',
-            {sender_name, sender_email, subject, message},
-            'ASfwLQOpGFVNyTg9g'
-        )
-            .then((response) => {
-                console.log('Message sent successfully', response.status, response.text)
-                window.location.reload();
-            })
-            .catch((err) => {
-                console.log('Failed', err)
-                alert('Message failed to send');
-            })
+        if (Sucess === true) {
+            send(
+                'service_kgm3h3h',
+                'template_5ogqb9t',
+                {sender_name, sender_email, subject, message},
+                'ASfwLQOpGFVNyTg9g'
+            )
+                .then((response) => {
+                    console.log('Message sent successfully', response.status, response.text)
+                    window.location.reload();
+                })
+                .catch((err) => {
+                    console.log('Failed', err)
+                    alert('Message failed to send');
+                })
+        } else {
+            alert("ReCaptcha not completed")
+        }
     }
     return (
         <div>
@@ -52,27 +64,41 @@ const Contact = () => {
                         <a href="mailto: jake.b.rothstein@gmail.com" className='btn'>Send Email</a>
                     </div>
 
-                <form onSubmit={sendMail} id='form' className="contact__form" >
-                    <div className="contact__form-group">
-                        <div className="contact__form-div">
-                            <input type="text" className="contact__form-input" placeholder='Insert your name' value={sender_name} onChange={handleName} required/>
+                    <form onSubmit={sendMail} id='form' className="contact__form">
+                        <div className="contact__form-group">
+                            <div className="contact__form-div">
+                                <input type="text" className="contact__form-input" placeholder='Insert your name'
+                                       value={sender_name} onChange={handleName} required/>
+                            </div>
+
+                            <div className="contact__form-div">
+                                <input type="email" className="contact__form-input" placeholder='Insert your email'
+                                       value={sender_email} onChange={handleEmail} required/>
+                            </div>
                         </div>
 
                         <div className="contact__form-div">
-                            <input type="email" className="contact__form-input" placeholder='Insert your email' value={sender_email} onChange={handleEmail} required/>
-                        </div>
-                    </div>
-
-                        <div className="contact__form-div">
-                            <input type="text" className="contact__form-input" placeholder='Insert your subject' value={subject} onChange={handleSubject} required/>
+                            <input type="text" className="contact__form-input" placeholder='Insert your subject'
+                                   value={subject} onChange={handleSubject} required/>
                         </div>
 
                         <div className="contact__form-div contact__form-area">
-                            <textarea name="" id="" cols="30" rows="10" className='contact__form-input' placeholder='Write your message' value={message} onChange={handleMessage} required></textarea>
+                            <textarea name="" id="" cols="30" rows="10" className='contact__form-input'
+                                      placeholder='Write your message' value={message} onChange={handleMessage}
+                                      required></textarea>
                         </div>
 
-                    <button className='btn'>Send Message</button>
-                </form>
+                        <div className="contact__form-captcha">
+                            <button className='btn'>Send Message</button>
+                            <br/>
+                            <ReCAPTCHA
+                                sitekey="6LdMhxEiAAAAAGF1GrmrTy5t4ykhs1tYDmgWjGcR"
+                                onChange={onChange}
+                                require
+                            />
+                        </div>
+                    </form>
+
                 </div>
             </section>
         </div>

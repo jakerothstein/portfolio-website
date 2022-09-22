@@ -49,3 +49,7 @@
 .contact__form-area textarea {
     resize: none;
 }
+
+.contact__form-captcha {
+    display: inline-grid;
+}
