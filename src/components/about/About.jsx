@@ -53,7 +53,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <AboutBox />
+            {/*<AboutBox />*/} {/* This is the old about section */}
         </section>
     );
 };
