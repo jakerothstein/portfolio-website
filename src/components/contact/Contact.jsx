@@ -92,7 +92,7 @@ const Contact = () => {
                             <button className='btn'>Send Message</button>
                             <br/>
                             <ReCAPTCHA
-                                sitekey="6LdMhxEiAAAAAGF1GrmrTy5t4ykhs1tYDmgWjGcR"
+                                sitekey="6LdTV9EjAAAAAJkeRgLPnBWcdWe0884Q0ujR6euE"
                                 onChange={onChange}
                                 require
                             />
