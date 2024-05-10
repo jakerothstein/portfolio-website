@@ -12,7 +12,7 @@ const About = () => {
                 <div className="about__data grid">
                     <div className="about info">
                         <p className="about__description">
-                            Hi, I'm Jake Rothstein, a high-school programmer from the bay area. In my free time I enjoy running, hiking and photography in nature.
+                            Hi, I'm Jake Rothstein, a developer from the bay area. In my free time I enjoy running, hiking and photography.
                         </p>
                         <a href={require("../../assets/Jake-Rothstein-Resume.pdf")}  className="btn" download="Jake Rothstein Resume - 2022">Download Resume</a>
                     </div>
@@ -21,7 +21,7 @@ const About = () => {
                         <div className="skills_data">
                             <div className="skills__titles">
                                 <h3 className="skills__name">Python</h3>
-                                <span className="skills__number">80%</span>
+                                <span className="skills__number">90%</span>
                             </div>
 
                             <div className="skills__bar">
@@ -43,7 +43,7 @@ const About = () => {
                         <div className="skills_data">
                             <div className="skills__titles">
                                 <h3 className="skills__name">HTML/CSS</h3>
-                                <span className="skills__number">50%</span>
+                                <span className="skills__number">60%</span>
                             </div>
 
                             <div className="skills__bar">
