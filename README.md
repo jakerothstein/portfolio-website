@@ -1,3 +1,6 @@
+Its hosted here as a static site that is way out of date lol: https://portfolio-3a90d.web.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
